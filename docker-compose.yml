@@ -1,10 +1,11 @@
 version: '3'
 
 services: 
-    web: 
+    website: 
         build: .
+        image: min:tag
         command: python proj/manage.py runserver 0.0.0.0:8000
         volumes:
-            - .:/code
+            - .:/app
         ports:
             - "5001:8000"    
